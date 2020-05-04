@@ -1,0 +1,17 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: alpine:3.7
+    steps:
+      - run:
+          name: Pipeline Values
+          command: |
+            echo 'pipeline.id: << pipeline.id >>'
+            echo 'pipeline.number: << pipeline.number >>'
+            echo 'pipeline.project.git_url: << pipeline.project.git_url >>'
+            echo 'pipeline.project.type: << pipeline.project.type >>'
+            echo 'pipeline.git.tag: << pipeline.git.tag >>'
+            echo 'pipeline.git.branch: << pipeline.git.branch >>'
+            echo 'pipeline.git.revision: << pipeline.git.revision >>'
+            echo 'pipeline.git.base_revision: << pipeline.git.base_revision >>'
