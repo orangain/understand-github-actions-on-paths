@@ -1,0 +1,14 @@
+name: Workflow E
+on:
+  push:
+    paths:
+      - E
+  pull_request:
+    paths:
+      - E
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo E
