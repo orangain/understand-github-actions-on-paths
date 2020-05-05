@@ -15,3 +15,7 @@ jobs:
             echo 'pipeline.git.branch: << pipeline.git.branch >>'
             echo 'pipeline.git.revision: << pipeline.git.revision >>'
             echo 'pipeline.git.base_revision: << pipeline.git.base_revision >>'
+      - run:
+          name: Environment Variables
+          command: |
+            env | sort
